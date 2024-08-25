@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - E-Cell Sharda University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <!-- Navbar -->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+        <div class="nav-container">
+            <img src="Images\ShardaUniversity.png" alt="E-Cell Sharda University Logo" class="nav-logo-left">
+            <img src="Images/NAAC.png" alt="E-Cell Sharda University Logo" class="nav-logo-left" style="width: 40px;">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#what-we-do">What We Do</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <!-- <li><a href="joinus.html">Join Us</a></li> -->
+            </ul>
+            <img src="Images\ECell.png" alt="Second Logo" class="nav-logo-right" style="width: 60px;">
+        </div>
+        </nav>
+
+    </header>
+    <!-- Why Join Us Section -->
+    <section id="why-join-us" class="why-join-us">
+        <div class="container">
+            <h2>Why Join Us?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Networking Opportunities</h3>
+                    <p>Connect with industry professionals, alumni, and like-minded students.</p>
+                </div>
+                <div class="card">
+                    <h3>Skill Development</h3>
+                    <p>Enhance your entrepreneurial and leadership skills through workshops and events.</p>
+                </div>
+                <div class="card">
+                    <h3>Real-World Experience</h3>
+                    <p>Work on real projects and gain practical experience in the field of entrepreneurship.</p>
+                </div>
+                <div class="card">
+                    <h3>Mentorship</h3>
+                    <p>Receive guidance from experienced mentors and successful entrepreneurs.</p>
+                </div>
+                <div class="card">
+                    <h3>Exclusive Resources</h3>
+                    <p>Access to exclusive resources, tools, and platforms to help you succeed.</p>
+                </div>
+                <div class="card">
+                    <h3>Collaborative Environment</h3>
+                    <p>Work in a dynamic and supportive environment that fosters innovation and teamwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Form Section -->
+    <section id="join-us-form" class="join-us-form">
+        <div class="container">
+            <h2>Join Us</h2>
+            <p>Become a part of Sharda University's Entrepreneurial Cell and start your journey into the world of entrepreneurship.</p>
+            <form action="submit-join-form.php" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone No.</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" name="department" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year of Study</label>
+                        <input type="text" id="year" name="year" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="why">Why do you want to join E-Cell?</label>
+                    <textarea id="why" name="why" required></textarea>
+                </div>
+                <button type="submit" class="join-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <img src="Images\ECell.png" alt="E-Cell Sharda University Logo">
+            <p><strong>Organisation</strong></p>
+            <p><i class="fas fa-map-marker-alt"></i> Sharda University, Greater Noida, UP, India</p>
+            <p><i class="fas fa-envelope"></i> ecell@sharda.ac.in</p>
+            <p><i class="fas fa-phone"></i> +91 1234567890</p>
+        </div>
+        <div class="footer-middle">
+            <p><strong>Social</strong></p>
+            <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+            <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a></p>
+        </div>
+        <div class="footer-right">
+            <p><strong>Subscribe</strong></p>
+            <p>Keep yourself updated. Subscribe to our newsletter</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 E-Cell Sharda University. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
