@@ -4,7 +4,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 /* General body styling */
@@ -17,102 +17,68 @@ body {
 /* Header styling */
 /* Navigation Bar Styles (Base) */
 /* Navigation Bar Styles (Base) */
+/* Navbar Styling */
 nav {
-    background-color: rgba(33, 60, 214, 0.692); /* Semi-transparent black background */
-    padding: 1rem 2rem;
+    background-color: rgba(35, 57, 76, 255); /* Solid color for more prominence */
+    padding: 0.5rem 1rem; /* Smaller padding for a smaller navbar */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it stays on top of other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better separation from content */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Container Styling */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-
-.nav-logo-left {
-    width: 100px; /* Adjust the width of the logos */
-    
-}
-
 .nav-logo-right {
-    width: 100px; /* Adjust the width of the logos */
-    padding-right: 45px;    
+    width: 70px; /* Slightly larger size for prominence */
+    padding-right: 20px; /* Reduced padding to shift it towards the left */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+/* Logo Styling */
+.nav-logo-left, .nav-logo-left2, .nav-logo-right {
+    width: 70px; /* Increase logo size slightly to highlight them */
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
 
+/* Logo Hover Effect for Highlight */
+.nav-logo-left:hover, .nav-logo-left2:hover, .nav-logo-right:hover {
+    transform: scale(1.1); /* Slightly increase size on hover to highlight them */
+}
+
+/* Navigation Links Styling */
 .nav-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
     flex-grow: 1;
-    justify-content: center; /* Center the navigation links */
+    justify-content: center;
 }
 
 .nav-links li {
-    margin: 0 1rem;
+    margin: 0 0.5rem; /* Reduce margin to make the navbar more compact */
 }
 
+/* Links Styling with Reduced Boldness */
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-weight: 400; /* Reduced boldness */
+    font-size: 1rem; /* Smaller font size to match the smaller navbar */
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth transition on hover */
 }
 
+/* Hover Effect for Links */
 .nav-links a:hover {
-    color: #ffd100; /* Yellow */
-}
-
-/* Add padding to the top of the content so it's not hidden behind the navbar */
-/* body {
-    padding-top: 80px; /* Adjust according to the height of your nav 
-} */
-
-/* Responsive Styles */
-
-/* For tablets and mobile devices */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    .nav-logo-left, .nav-logo-right {
-        width: 80px; /* Adjust logo size for smaller screens */
-    }
-}
-
-/* For very small devices (e.g., smartphones in portrait mode) */
-@media (max-width: 480px) {
-    .nav-container {
-        padding: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-    }
-
-    .nav-logo-left, .nav-logo-right {
-        width: 60px; /* Further adjust logo size */
-    }
+    color: #ffd100;
+    font-weight: 500; /* Slightly increase boldness on hover for emphasis */
 }
 
 
@@ -802,16 +768,18 @@ body {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 400px;
 }
 
 #contact form button {
-    background-color: #002d72; /* Dark Blue */
+    background-color: rgba(35, 57, 76, 255); /* Dark Blue */
     color: #fff;
     padding: 0.75rem;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    width: 450px;
 }
 
 #contact form button:hover {
@@ -821,7 +789,7 @@ body {
 
 /* Footer Styles */
 footer {
-    background-color: #002d72; /* Dark Blue */
+    background-color:rgba(35, 57, 76, 255); /* Dark Blue */
     color: #fff;
     padding: 2rem 1rem;
 }
