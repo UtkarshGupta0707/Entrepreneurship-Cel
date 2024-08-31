@@ -36,14 +36,19 @@ nav {
     align-items: center;
     flex-wrap: wrap;
 }
-.nav-logo-right {
-    width: 70px; /* Slightly larger size for prominence */
+.nav-logo-left2, .nav-logo-right {
+    width: 50px; /* Slightly larger size for prominence */
+    padding-right: 20px; /* Reduced padding to shift it towards the left */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+.nav-logo-left2 {
+    width: 40px; /* Slightly larger size for prominence */
     padding-right: 20px; /* Reduced padding to shift it towards the left */
     transition: transform 0.3s ease; /* Smooth transition effect */
 }
 /* Logo Styling */
-.nav-logo-left, .nav-logo-left2, .nav-logo-right {
-    width: 70px; /* Increase logo size slightly to highlight them */
+.nav-logo-left{
+    width: 100px; /* Increase logo size slightly to highlight them */
     transition: transform 0.3s ease; /* Smooth transition effect */
 }
 
@@ -95,8 +100,8 @@ nav {
 }
 
 .floating-social-icons a img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -411,7 +416,7 @@ section h2 {
     left: 0;
     right: 0;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 1);
     color: #fff;
     z-index: 2;
     text-align: center;
@@ -540,9 +545,10 @@ section h2 {
 }
 
 .event-info {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 1);
     padding: 20px;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     color: white;
     margin-top: -70px;
     position: relative;
