@@ -726,7 +726,7 @@ body {
 
 .join-button {
     padding: 10px 20px;
-    background-color: #0056b3;
+    background-color: rgba(35, 57, 76, 255);
     color: white;
     border: none;
     border-radius: 5px;
@@ -738,7 +738,7 @@ body {
 }
 
 .join-button:hover {
-    background-color: #004080;
+    background-color: rgba(35, 57, 76, 251);
 }
 
 /* Responsive Design */
