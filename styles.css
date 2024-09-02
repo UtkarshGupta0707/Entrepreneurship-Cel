@@ -1,11 +1,11 @@
 /* styles.css */
 
 /* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+/* body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
-}
+} */
 
 /* General body styling */
 body {
@@ -115,23 +115,44 @@ nav {
 
 
 /* Hero section styling with full-screen background image */
+/* Ensuring full height and no padding or margins */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
 .hero-section {
-    height: 100vh; /* Full viewport height */
-    background-image: url('Images/TEAM.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff; /* Ensure the text is readable against the background */
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width */
+    background: url('Images/TEAM.JPG') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-attachment: fixed; /* Makes the background fixed during scrolling */
+    color: #fff; /* Text color to ensure readability */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
     z-index: 1;
+    padding: 14rem;
 }
 
-/* Adding an overlay for better text visibility */
+
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -2; /* Places the video below the overlay */
+}
+
+
+/* Overlay to darken the background image for better text contrast */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -143,6 +164,7 @@ nav {
     z-index: -1;
 }
 
+/* Styling for the hero text */
 .hero-section h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -153,8 +175,9 @@ nav {
     margin-bottom: 2rem;
 }
 
+/* Call to action button styling */
 .hero-section .cta-button {
-    background-color: #009639; /* Green */
+    background-color: #009639;
     color: #fff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -163,17 +186,11 @@ nav {
     transition: background-color 0.3s ease;
 }
 
+/* Hover state for the button */
 .hero-section .cta-button:hover {
     background-color: #ffd100;
 }
-
-/* Container styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+ 
 /* About Section */
 .about-section {
     padding: 60px 0;
@@ -977,4 +994,38 @@ footer {
     height: auto;
     z-index: -1;
     background-size: cover;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    padding-top: 40px;
+
+}
+
+
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #666; /* Color for inactive tab buttons */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+
+.tab-button:hover {
+    color: #000; /* Color on hover */
+}
+
+.tab-button.active {
+    color: #02203f; /* Active tab button color */
+    border-bottom: 3px solid #02203f; /* Line under active tab */
+}
+
+.tab-button:focus {
+    outline: none; /* Removes the outline when focused */
 }
