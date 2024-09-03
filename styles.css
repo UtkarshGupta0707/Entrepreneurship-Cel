@@ -127,7 +127,7 @@ html, body {
     position: relative;
     height: 100vh; /* Full height of the viewport */
     width: 100%; /* Full width */
-    background: url('Images/TEAM.JPG') no-repeat center center;
+    /* background: url('Images/TEAM.JPG') no-repeat center center; */
     background-size: cover; /* Ensures the image covers the entire section */
     background-attachment: fixed; /* Makes the background fixed during scrolling */
     color: #fff; /* Text color to ensure readability */
@@ -138,6 +138,7 @@ html, body {
     text-align: center;
     z-index: 1;
     padding: 14rem;
+    margin-bottom: 10px;
 }
 
 
@@ -193,7 +194,7 @@ html, body {
  
 /* About Section */
 .about-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background-color: #f9f9f9; /* Light background color */
 }
 
@@ -212,7 +213,7 @@ html, body {
 }
 
 .about-image img {
-    max-width: 100%;
+    width: 50px;
     height: auto;
     border-radius: 10px; /* Slightly rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -223,22 +224,31 @@ html, body {
     flex: 1;
     padding-left: 40px; /* Added padding to increase space */
     color: #333;
+    text-align: justify;
 }
 
 .about-text h2 {
     font-size: 2.5rem;
     color: #003366; /* Dark blue color */
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .about-text h2 span {
-    color: #ffd100; /* Highlight color (yellow) */
+    color: #003366; /* Highlight color (yellow) */
 }
 
 .about-text p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0;
+}
+
+.about-text p span{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #003366;
 }
 
 /* Responsive Design */
