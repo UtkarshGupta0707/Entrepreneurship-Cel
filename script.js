@@ -98,3 +98,21 @@ track.addEventListener('mouseleave', () => {
         nextButton.click();
     }, 3000);
 });
+
+
+function showSection(sectionId) {
+    // Hide all sections
+    document.querySelectorAll('.tab-content').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+
+    // Update active tab
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+}
+

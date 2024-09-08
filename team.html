@@ -30,11 +30,11 @@
 
     </header> 
     <div class="tabs">
-        <button class="tab-button active" data-target="#mentors">Mentors</button>
-        <button class="tab-button" data-target="#our-team">Our Team</button>
+        <button class="tab-button active" onclick="showSection('mentors')">Mentors</button>
+        <button class="tab-button" onclick="showSection('team')">Our Team</button>
     </div>
-
-    <div id="mentors" class="content-section active">
+    <div id="mentors" class="tab-content">
+    <!-- <div id="mentors" class="content-section active"> -->
         <div class="team-category">
         <h3>Mentors</h3>
         <div class="team-member">
@@ -69,6 +69,11 @@
                         <p>Faculty Advisor, E-cell</p>
                     </div>
                     <div class="member-card">
+                        <img src="Images/Harishankar.jpg" alt="Faculty Coordinator">
+                        <h4>Prof(Dr.)Hari Shankar Shyam</h4>
+                        <p>Professor,Management</p>
+                    </div>
+                    <div class="member-card">
                         <img src="Images/rimplemanchanda.jpg" alt="Faculty Coordinator">
                         <h4>Dr.Rimple Manchanda</h4>
                         <p>Faculty, E-cell</p>
@@ -88,8 +93,8 @@
             </div>
         <!-- Add more mentors here -->
     </div>
-
-    <div id="our-team" class="content-section">
+    <div id="team" class="tab-content" style="display: none;">
+    <!-- <div id="our-team" class="content-section"> -->
         <div class="team-category"><h3>Our Team</h3>        
             <div class="team-members">
                 <!-- Repeat this block for each team member -->
