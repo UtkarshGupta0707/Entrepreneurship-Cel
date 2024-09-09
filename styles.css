@@ -42,13 +42,13 @@ nav {
     transition: transform 0.3s ease; /* Smooth transition effect */
 }
 .nav-logo-left2 {
-    width: 40px; /* Slightly larger size for prominence */
+    width: 60px; /* Slightly larger size for prominence */
     padding-right: 20px; /* Reduced padding to shift it towards the left */
     transition: transform 0.3s ease; /* Smooth transition effect */
 }
 /* Logo Styling */
 .nav-logo-left{
-    width: 100px; /* Increase logo size slightly to highlight them */
+    width: 110px; /* Increase logo size slightly to highlight them */
     transition: transform 0.3s ease; /* Smooth transition effect */
 }
 
