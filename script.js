@@ -17,69 +17,42 @@ const nextButton = document.querySelector('.carousel-button-right');
 const prevButton = document.querySelector('.carousel-button-left');
 const slideWidth = slides[0].getBoundingClientRect().width;
 
-// Clone the first and last slides for infinite scrolling
-const firstSlideClone = slides[0].cloneNode(true);
-const lastSlideClone = slides[slides.length - 1].cloneNode(true);
-
-track.appendChild(firstSlideClone);
-track.insertBefore(lastSlideClone, slides[0]);
-
 // Arrange the slides next to each other
-const updatedSlides = Array.from(track.children);
-updatedSlides.forEach((slide, index) => {
+slides.forEach((slide, index) => {
     slide.style.left = slideWidth * index + 'px';
 });
 
-let currentIndex = 1;
+let currentIndex = 0;
+const slidesPerGroup = 3; // Number of slides to move at a time
 
-// Move to the actual first slide initially (not the cloned one)
-track.style.transform = 'translateX(-' + slideWidth + 'px)';
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
+// Function to move to the desired group of slides
+const moveToSlide = (track, targetIndex) => {
     track.style.transition = 'transform 0.5s ease-in-out';
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
-};
-
-const updateCurrentSlide = (direction) => {
-    const currentSlide = track.querySelector('.current-slide') || slides[0];
-    if (direction === 'next') {
-        currentIndex++;
-    } else if (direction === 'prev') {
-        currentIndex--;
-    }
-
-    const nextSlide = updatedSlides[currentIndex];
-    moveToSlide(track, currentSlide, nextSlide);
+    track.style.transform = 'translateX(-' + slideWidth * targetIndex + 'px)';
 };
 
 // Handle clicking next
 nextButton.addEventListener('click', () => {
-    updateCurrentSlide('next');
+    const maxIndex = slides.length - slidesPerGroup;
 
-    // Handle the loop back to the first slide
-    if (currentIndex === updatedSlides.length - 1) {
-        setTimeout(() => {
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(-' + slideWidth + 'px)';
-            currentIndex = 1;
-        }, 500);
+    if (currentIndex < maxIndex) {
+        currentIndex += slidesPerGroup;
+    } else {
+        currentIndex = 0; // Loop back to the first set when reaching the end
     }
+
+    moveToSlide(track, currentIndex);
 });
 
 // Handle clicking previous
 prevButton.addEventListener('click', () => {
-    updateCurrentSlide('prev');
-
-    // Handle the loop back to the last slide
-    if (currentIndex === 0) {
-        setTimeout(() => {
-            track.style.transition = 'none';
-            track.style.transform = 'translateX(-' + slideWidth * (updatedSlides.length - 2) + 'px)';
-            currentIndex = updatedSlides.length - 2;
-        }, 500);
+    if (currentIndex > 0) {
+        currentIndex -= slidesPerGroup;
+    } else {
+        currentIndex = slides.length - slidesPerGroup; // Loop back to the last set when reaching the start
     }
+
+    moveToSlide(track, currentIndex);
 });
 
 // Automatically slide to the next event every 3 seconds
